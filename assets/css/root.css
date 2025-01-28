@@ -158,26 +158,15 @@
     color: var(--orenge) !important;
 }
 
+@media (max-width:767.98px) {
+    :root {
+        --fs-5xl: 58px;
+        --lh-95: normal;
+    }
+}
+
 @media (max-width:575.98px) {
     :root {
-        --fs-sm: 12px;
-        --fs-md: 16px;
-        --fs-lg: 20px;
-        --fs-xl: 18px;
-        --fs-2xl: 26px;
-        --fs-3xl: 34px;
-        --fs-4xl: 38px;
-        --fs-5xl: 70px;
-        /* -----weight----- */
-        --fw-400: 400;
-        --fw-500: 600;
-        --fw-600: 700;
-        /* -----l-h------- */
-        --lh-25: 24px;
-        --lh-32: 30px;
-        --lh-33: 32px;
-        --lh-42: 40px;
-        --lh-54: 47px;
-        --lh-61: 50px;
+        --fs-5xl: 48px;
     }
 }

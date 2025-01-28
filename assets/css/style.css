@@ -40,7 +40,7 @@
 .nav-bg-layer {
     max-width: 100%;
     background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
 
 .menu-lines {
@@ -108,14 +108,24 @@
 }
 
 .section-2-border {
-    backdrop-filter: blur(32px);
-    transform: translateY(-114px);
-    padding: 24px;
-    border: 1px solid grey;
-    z-index: 4;
+    position: relative;
     border-radius: 10px;
-    max-width: 1320px;
-    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0) 103.14%);
+    backdrop-filter: blur(16px) !important;
+    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0) 103.14%) !important;
+}
+
+.section-2-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    backdrop-filter: blur(16px) !important;
+    background: linear-gradient(95.21deg, rgba(255, 255, 255, 0.2) -0.59%, rgba(255, 255, 255, 0.092) 106.99%);
+    padding: 1px;
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
 }
 
 .mt-243 {
@@ -282,7 +292,7 @@
     padding-left: 2px;
     padding-right: 2px;
     padding-bottom: 2px;
-    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.1) 0.97%, rgba(255, 255, 255, 0) 103.14%);
+    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.1) 0.97%, rgba(255, 255, 255, 0.1) 103.14%);
     mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
@@ -306,7 +316,7 @@
     padding-right: 2px;
     padding-top: 2px;
     padding-left: 2px;
-    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.1) 0.97%, rgba(255, 255, 255, 0) 103.14%);
+    background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.1) 0.97%, rgba(255, 255, 255, 0.1) 103.14%);
     mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
@@ -424,12 +434,17 @@
 .accordion-item {
     background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0) 103.14%) !important;
     color: var(--grey) !important;
-    border: 1px solid rgb(161, 156, 156) !important;
+    /* border: 1px solid rgb(161, 156, 156) !important; */
     border-radius: 10px !important;
 }
 
 .accordion-button::after {
     background-image: url(../image/svg/accordion-img.svg) !important;
+}
+
+.accordion {
+    --bs-accordion-border-color: none !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
 }
 
 .pb-456 {
@@ -450,13 +465,30 @@
     margin-top: 73px;
 }
 
+.box-3 {
+    position: relative;
+}
+
+.box-3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: 10px;
+    background: linear-gradient(95.21deg, rgba(255, 255, 255, 0.2) -0.59%, rgba(255, 255, 255, 0.092) 106.99%) !important;
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+}
+
 /* nav-responsive */
 @media (max-width: 991.98px) {
 
     .nav-link {
         display: flex !important;
         flex-direction: column;
-        background: #00243C !important;
+        backdrop-filter: blur(100px) !important;
         width: 100%;
         min-height: 100vh;
         position: fixed;
@@ -514,7 +546,11 @@
 @media (min-width: 992px) {}
 
 /* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .section-2-border {
+        transform: translateY(-125px);
+    }
+}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
