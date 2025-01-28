@@ -188,6 +188,11 @@
 }
 
 /* section-4 */
+.py-59 {
+    padding-top: 59px;
+    padding-bottom: 59px;
+}
+
 .roadmap::after {
     content: '';
     position: absolute;
@@ -212,7 +217,7 @@
     position: absolute;
     width: 36px;
     height: 36px;
-    right: -17px;
+    right: -18px;
     background: linear-gradient(180deg, #FFA800 0%, #F06500 100%);
     top: 15px;
     border-radius: 50%;
@@ -231,16 +236,17 @@
     left: -16px;
 }
 
-.content {
-    color: white;
-    position: relative;
-    text-align: right;
+.mx-547 {
+    max-width: 547px;
 }
 
 @media (max-width: 600px) {
+    .text-left {
+        text-align: left;
+    }
 
     .roadmap::after {
-        left: 31px;
+        left: 45px;
     }
 
     .timeline {
@@ -290,6 +296,7 @@
     background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.05) 0.97%, rgba(255, 255, 255, 0) 103.14%) !important;
     color: var(--grey) !important;
 }
+
 
 /* nav-responsive */
 @media (max-width: 991.98px) {
