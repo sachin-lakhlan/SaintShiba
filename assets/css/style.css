@@ -12,6 +12,7 @@
     background-image: url(../image/png/header-bg-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .header-button {
