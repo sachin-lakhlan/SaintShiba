@@ -21,6 +21,10 @@
     background: linear-gradient(90deg, #FFA800 0%, #F06500 100%);
 }
 
+.header-button:hover {
+    background: linear-gradient(90deg, #F06500 100%, #FFA800 0%);
+}
+
 .mx-1320 {
     max-width: 1320px;
 }
@@ -35,9 +39,8 @@
 
 .nav-bg-layer {
     max-width: 100%;
-    height: 100px;
-    background: #000000BF;
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
 }
 
 .menu-lines {
@@ -90,6 +93,16 @@
 }
 
 /* section-1 */
+.section-1-top-circle {
+    top: 221px;
+    right: 117px;
+}
+
+.section-1-bottom-circle {
+    right: 0;
+    bottom: 0;
+}
+
 .padding-24 {
     padding: 24px;
 }
